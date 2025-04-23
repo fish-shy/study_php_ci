@@ -8,3 +8,8 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('/blog', 'Blog::index');
 $routes->setAutoRoute(false);
+
+$routes->group('', function ($routes) {
+    $routes->get('/', 'Home::index');
+    $routes->get('blog/tampil', 'Blog::tampil');
+}); 
