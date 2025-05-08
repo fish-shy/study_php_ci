@@ -10,7 +10,8 @@ $routes->get('/blog', 'Blog::index');
 $routes->get('/salam', 'Salam::index');
 $routes->get('/registrasi', 'Registrasi::index');
 $routes->get('/belajarhelper', 'BelajarHelper::index');
-
+$routes->get('/belajarlibrary', 'BelajarLibrary::index');
+$routes->get('/template', 'Template::index');
 
 $routes->group('', function ($routes) {
     $routes->get('/', 'Home::index');
@@ -32,4 +33,10 @@ $routes->group('registrasi',static function ($routes) {
 $routes->group('belajarhelper',static function ($routes) {
     $routes->get('/belajarhelper', 'BelajarHelper::index');
     $routes->get('(:any)', 'BelajarHelper::$1');
+});
+
+
+$routes->group('belajarlibrary',static function ($routes) {
+    $routes->get('/belajarlibrary', 'BelajarLibrary::index');
+    $routes->get('(:any)', 'BelajarLibrary::$1');
 });
