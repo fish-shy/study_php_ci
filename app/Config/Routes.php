@@ -11,7 +11,9 @@ $routes->get('/salam', 'Salam::index');
 $routes->get('/registrasi', 'Registrasi::index');
 $routes->get('/belajarhelper', 'BelajarHelper::index');
 $routes->get('/belajarlibrary', 'BelajarLibrary::index');
-$routes->get('/template', 'Template::index');
+$routes->get('/mahasiswa', 'Mahasiswa::index');
+$routes->get('/dashboard', 'Dashboard::index');
+
 
 $routes->group('', function ($routes) {
     $routes->get('/', 'Home::index');
