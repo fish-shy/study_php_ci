@@ -13,6 +13,9 @@ $routes->get('/belajarhelper', 'BelajarHelper::index');
 $routes->get('/belajarlibrary', 'BelajarLibrary::index');
 $routes->get('/mahasiswa', 'Mahasiswa::index');
 $routes->get('/dashboard', 'Dashboard::index');
+$routes->get('/mahasiswa/add', 'Mahasiswa::add');
+
+$routes->post('/mahasiswa/submit', 'Mahasiswa::submit');
 
 
 $routes->group('', function ($routes) {

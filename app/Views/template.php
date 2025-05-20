@@ -24,6 +24,7 @@
               </div>
             </form>
           </div>
+          
           <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item nav-profile dropdown">
               <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
@@ -187,11 +188,12 @@
             
           </ul>
         </nav>
-        <? echo view($content)?>
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
-          </div>
+           <?php echo view($content);?>  
+        </div>
+
           <!-- content-wrapper ends -->
           <!-- partial:../../partials/_footer.html -->
           <footer class="footer">
